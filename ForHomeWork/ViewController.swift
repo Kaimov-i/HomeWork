@@ -9,14 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var person = Person()
+
     var helper = Helper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("My name is \(person.fullName)")
-        helper.addPerson(Person(name: "Ilman", surname: "Kaimov"))
-        helper.addPerson(Person(name: "Jon", surname: "Black"))
+        helper.addPerson(User(userName: "Ilman", password: "123", personalData: Person(name: "Ilman", surname: "Kaimov")))
+        helper.addPerson(User(userName: "john", password: "321", personalData: Person(name: "John", surname: "Doe")))
         print(helper.getPerson())
     }
 

@@ -7,15 +7,9 @@
 
 import Foundation
 
-class Person {
+struct Person {
     var name: String
     var surname: String
-    
-    init(name: String = "Ilman", surname: String = "Kaimov") {
-        self.name = name
-        self.surname = surname
-        
-    }
     
     var fullName: String {
         "\(name)  \(surname)"
