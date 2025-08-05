@@ -14,6 +14,7 @@ class Person {
     init(name: String = "Ilman", surname: String = "Kaimov") {
         self.name = name
         self.surname = surname
+        
     }
     
     var fullName: String {
