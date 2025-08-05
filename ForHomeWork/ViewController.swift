@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .brown
         helper.addPerson(User(userName: "Ilman", password: "123", personalData: Person(name: "Ilman", surname: "Kaimov")))
         helper.addPerson(User(userName: "john", password: "321", personalData: Person(name: "John", surname: "Doe")))
         print(helper.getPerson())

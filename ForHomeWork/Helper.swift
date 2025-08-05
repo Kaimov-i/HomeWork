@@ -16,7 +16,7 @@ class Helper {
     
     func getPerson() {
         for person in persons {
-            print("\(person.name) \(person.surname)")
+            print("\(person.personalData.name) \(person.personalData.surname)")
         }
     }
 }
