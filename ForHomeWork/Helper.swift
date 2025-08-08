@@ -14,6 +14,12 @@ class Helper {
         persons.append(person)
     }
     
+    func addpersons(_ persons: [User]) {
+        persons.forEach { person in
+            self.persons.append(person)
+        }
+    }
+    
     func getPerson() {
         for person in persons {
             print("\(person.personalData.name) \(person.personalData.surname)")

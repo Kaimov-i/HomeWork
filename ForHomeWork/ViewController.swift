@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
 
     var helper = Helper()
+    var userRepository = UserRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
-        helper.addPerson(User(userName: "Ilman", password: "123", personalData: Person(name: "Ilman", surname: "Kaimov")))
-        helper.addPerson(User(userName: "john", password: "321", personalData: Person(name: "John", surname: "Doe")))
+        view.alpha = 0.9
+        helper.addpersons(userRepository.getAllUsers())
         print(helper.getPerson())
     }
 
