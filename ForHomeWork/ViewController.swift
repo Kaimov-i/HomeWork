@@ -17,7 +17,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .brown
         view.alpha = 0.9
-        print(helper.addpersons(userRepository.getAllUsers()))
+        helper.getPerson().forEach { person in
+            print(person)
+        }
     }
 
 
