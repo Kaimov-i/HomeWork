@@ -11,5 +11,4 @@ struct User {
     let userName: String
     let password: String
     let personalData: Person
-    
 }

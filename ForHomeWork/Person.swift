@@ -14,6 +14,5 @@ struct Person {
     var fullName: String {
         "\(name)  \(surname)"
     }
-    
 }
   
