@@ -8,8 +8,8 @@
 import Foundation
 
 struct Person {
-    var name: String
-    var surname: String
+    let name: String
+    let surname: String
     
     var fullName: String {
         "\(name)  \(surname)"

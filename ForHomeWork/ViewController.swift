@@ -10,15 +10,14 @@ import UIKit
 class ViewController: UIViewController {
 
 
-    var helper = Helper()
-    var userRepository = UserRepository()
+    private let helper = Helper()
+    private let userRepository = UserRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
         view.alpha = 0.9
-        helper.addpersons(userRepository.getAllUsers())
-        print(helper.getPerson())
+        print(helper.addpersons(userRepository.getAllUsers()))
     }
 
 

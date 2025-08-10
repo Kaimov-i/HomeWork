@@ -10,7 +10,7 @@ import Foundation
 class UserRepository {
     
     func getAllUsers() -> [User] {
-        return [
+        [
             User(userName: "ilman", password: "123", personalData:
                     Person(name: "Ilman", surname: "Kurbanov",)),
             User(userName: "ilman1", password: "123", personalData:

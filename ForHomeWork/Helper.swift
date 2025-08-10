@@ -8,7 +8,7 @@
 import Foundation
 
 class Helper {
-    var persons: [User] = []
+   private var persons: [User] = []
     
     func addPerson(_ person: User) {
         persons.append(person)
@@ -20,9 +20,7 @@ class Helper {
         }
     }
     
-    func getPerson() {
-        for person in persons {
-            print("\(person.personalData.name) \(person.personalData.surname)")
-        }
+    func getPerson() -> [User] {
+       persons
     }
 }
