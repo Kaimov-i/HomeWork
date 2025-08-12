@@ -15,9 +15,7 @@ class Helper {
     }
     
     func addpersons(_ persons: [User]) {
-        persons.forEach { person in
-            self.persons.append(person)
-        }
+        self.persons.append(contentsOf: persons)
     }
     
     func getPerson() -> [User] {

@@ -12,13 +12,14 @@ class ViewController: UIViewController {
     private let helper = Helper()
     private let userRepository = UserRepository()
     private let textLabel = UILabel()
-    private var button: UIButton {
+    
+    private var button: UIButton = {
         let button = UIButton()
         button.setTitle("Show FullName", for: .normal)
-        button.backgroundColor = super.view.backgroundColor
+        button.backgroundColor = .clear
         button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
         return button
-    }
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +30,17 @@ class ViewController: UIViewController {
         }
         
         view.addSubview(button)
-        setupLabel(text: textLabel)
+        setupLabel()
         view.addSubview(textLabel)
         
     }
     
-    private func setupLabel(text: UILabel) {
+    private func setupLabel() {
         guard let randomUser = helper.getPerson().randomElement()?.userName else { return }
-        text.text = randomUser
-        text.font = .systemFont(ofSize: 25)
-        text.textColor = .blue
-        text.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        textLabel.text = randomUser
+        textLabel.font = .systemFont(ofSize: 25)
+        textLabel.textColor = .blue
+        textLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     }
     
 }
