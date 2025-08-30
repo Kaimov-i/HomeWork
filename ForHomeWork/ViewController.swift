@@ -13,19 +13,20 @@ class ViewController: UIViewController {
     private let userRepository = UserRepository()
     
     private let textLabel = UILabel()
-    private let button = UIButton()
+//    private let button = UIButton()
+    private let redButton = CostomButton("Show New User", .normal, .red, false)
+    private let greenButton = CostomButton("Hide User", .normal, .green, true)
     private let stakView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .brown
+        view.backgroundColor = .systemBlue
         helper.addpersons(userRepository.getAllUsers())
         helper.getPerson().forEach { user in
             print(user)
         }
         
-        setupButton()
         setupLabel()
         setupStackView()
         view.addSubview(stakView)
@@ -41,18 +42,19 @@ class ViewController: UIViewController {
         textLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     }
     
-    private func setupButton()  {
-        button.setTitle("Show FullName", for: .normal)
-        button.backgroundColor = .clear
-        button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
-    }
+//    private func setupButton()  {
+//        button.setTitle("Show FullName", for: .normal)
+//        button.backgroundColor = .clear
+//        button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
+//    }
     
     private func setupStackView() {
         stakView.axis = .vertical
-        stakView.distribution = .fill
+        stakView.distribution = .fillEqually
         stakView.spacing = 20
         stakView.addArrangedSubview(textLabel)
-        stakView.addArrangedSubview(button)
+        stakView.addArrangedSubview(redButton)
+        stakView.addArrangedSubview(greenButton)
     }
     
     private func setupConstraints() {
