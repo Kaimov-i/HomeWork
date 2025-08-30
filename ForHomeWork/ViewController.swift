@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     private let userRepository = UserRepository()
     
     private let textLabel = UILabel()
-//    private let button = UIButton()
     private let redButton = CostomButton("Show New User", .normal, .red, false)
     private let greenButton = CostomButton("Hide User", .normal, .green, true)
     private let stakView = UIStackView()
@@ -39,18 +38,12 @@ class ViewController: UIViewController {
         textLabel.font = .systemFont(ofSize: 25)
         textLabel.textAlignment = .center
         textLabel.textColor = .blue
-        textLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        textLabel.frame = CGRect(x: 100, y: 100, width: 200, height: 50)
     }
-    
-//    private func setupButton()  {
-//        button.setTitle("Show FullName", for: .normal)
-//        button.backgroundColor = .clear
-//        button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
-//    }
     
     private func setupStackView() {
         stakView.axis = .vertical
-        stakView.distribution = .fillEqually
+        stakView.distribution = .fillProportionally
         stakView.spacing = 20
         stakView.addArrangedSubview(textLabel)
         stakView.addArrangedSubview(redButton)

@@ -20,7 +20,11 @@ class CostomButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupButton(_ buttonTitle: String, _ buttonState: State, _ buttonColor: UIColor) {
+    private func setupButton(
+        _ buttonTitle: String,
+        _ buttonState: State,
+        _ buttonColor: UIColor
+    ) {
         setTitle(buttonTitle, for: buttonState)
         backgroundColor = buttonColor
     }
@@ -34,5 +38,4 @@ class CostomButton: UIButton {
             layer.cornerRadius = 15
         }
     }
-    
 }
