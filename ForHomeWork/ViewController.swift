@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         textLabel.font = .systemFont(ofSize: 25)
         textLabel.textAlignment = .center
         textLabel.textColor = .blue
-        textLabel.frame = CGRect(x: 100, y: 100, width: 200, height: 50)
     }
     
     private func setupStackView() {
