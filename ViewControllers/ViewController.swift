@@ -24,14 +24,21 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemBlue
         helper.addpersons(userRepository.getAllUsers())
         helper.getPerson().forEach { user in
-            print(user)
+            print(user.userName)
         }
         
         setupLabel()
         setupStackView()
         view.addSubview(stakView)
         setupConstraints()
+        setupButton()
     }
+    
+    @objc private func randomName() {
+        textLabel.text = helper.getPerson().randomElement()?.userName
+    }
+    
+    
   
    
 }
@@ -46,14 +53,22 @@ private extension ViewController {
         textLabel.textColor = .blue
     }
     
-    private func setupStackView() {
+     func setupStackView() {
         stakView.axis = .vertical
-        stakView.distribution = .fillProportionally
+        stakView.distribution = .equalSpacing
         stakView.spacing = 20
         stakView.addViews(views: textLabel, redButton, greenButton)
         stakView.addArrangedSubview(textLabel)
         stakView.addArrangedSubview(redButton)
         stakView.addArrangedSubview(greenButton)
+    }
+    
+    func setupButton() {
+        redButton.addTarget(self, action: #selector(randomName), for: .touchUpInside)
+        let action = UIAction { _ in
+            self.textLabel.text = " "
+        }
+        greenButton.addAction(action, for: .touchUpInside)
     }
     
 }

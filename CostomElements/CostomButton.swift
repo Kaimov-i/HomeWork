@@ -33,6 +33,8 @@ class CostomButton: UIButton {
     ) {
         setTitle(title, for: state)
         backgroundColor = color
+        
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     private func setupShadow(isOn: Bool) {
