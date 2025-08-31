@@ -11,10 +11,11 @@ class ViewController: UIViewController {
 
     private let helper = Helper()
     private let userRepository = UserRepository()
+   
     
     private let textLabel = UILabel()
-    private let redButton = CostomButton("Show New User", .normal, .red, false)
-    private let greenButton = CostomButton("Hide User", .normal, .green, true)
+    private let redButton = CostomButton(stile: StileOfButton(title: "Show New User", color: .red),  state: .normal)
+    private let greenButton = CostomButton(stile: StileOfButton(title: "Hide User", color: .green, shadowIsOn: true), state: .normal)
     private let stakView = UIStackView()
     
     override func viewDidLoad() {

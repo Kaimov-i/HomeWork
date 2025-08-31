@@ -7,13 +7,19 @@
 
 import UIKit
 
+struct StileOfButton {
+    let title: String
+    let color: UIColor
+    var shadowIsOn: Bool = false
+}
+
 class CostomButton: UIButton {
     
-    init(_ buttonTitle: String, _ buttonState: State, _ buttonColor: UIColor, _ shadowIsOn: Bool) {
+    init(stile: StileOfButton, state: State) {
         super.init(frame: .zero)
         
-        setupButton(buttonTitle, buttonState, buttonColor)
-        setupShadow(isOn: shadowIsOn)
+        setupShadow(isOn: stile.shadowIsOn)
+        setupButton(title: stile.title, state: state, color: stile.color)
     }
     
     required init?(coder: NSCoder) {
@@ -21,12 +27,12 @@ class CostomButton: UIButton {
     }
     
     private func setupButton(
-        _ buttonTitle: String,
-        _ buttonState: State,
-        _ buttonColor: UIColor
+        title: String,
+        state: State,
+        color: UIColor
     ) {
-        setTitle(buttonTitle, for: buttonState)
-        backgroundColor = buttonColor
+        setTitle(title, for: state)
+        backgroundColor = color
     }
     
     private func setupShadow(isOn: Bool) {
@@ -38,4 +44,11 @@ class CostomButton: UIButton {
             layer.cornerRadius = 15
         }
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPaht = UIBezierPath(rect: bounds)
+        layer.shadowPath = shadowPaht.cgPath
+    }
+    
 }
