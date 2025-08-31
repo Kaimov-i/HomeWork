@@ -50,7 +50,7 @@ private extension ViewController {
         stakView.axis = .vertical
         stakView.distribution = .fillProportionally
         stakView.spacing = 20
-        stakView.addViews(view: textLabel, redButton, greenButton)
+        stakView.addViews(views: textLabel, redButton, greenButton)
         stakView.addArrangedSubview(textLabel)
         stakView.addArrangedSubview(redButton)
         stakView.addArrangedSubview(greenButton)

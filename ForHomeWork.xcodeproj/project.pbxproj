@@ -16,6 +16,7 @@
 		89E9B4B72E64350700DD8550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E9B4A82E64350700DD8550 /* LaunchScreen.storyboard */; };
 		89E9B4B92E64350700DD8550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E9B4A42E64350700DD8550 /* Assets.xcassets */; };
 		89E9B4C32E64367200DD8550 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E9B4C22E64367200DD8550 /* UIStackView+Extension.swift */; };
+		89E9B5032E65019700DD8550 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E9B5022E65019700DD8550 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		89E9B4AD2E64350700DD8550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89E9B4AE2E64350700DD8550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89E9B4C22E64367200DD8550 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		89E9B5022E65019700DD8550 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				89E9B4C22E64367200DD8550 /* UIStackView+Extension.swift */,
+				89E9B5022E65019700DD8550 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				89E9B4B02E64350700DD8550 /* CostomButton.swift in Sources */,
 				89E9B4B12E64350700DD8550 /* ViewController.swift in Sources */,
 				89E9B4B32E64350700DD8550 /* Person.swift in Sources */,
+				89E9B5032E65019700DD8550 /* UIView+Extension.swift in Sources */,
 				89E9B4C32E64367200DD8550 /* UIStackView+Extension.swift in Sources */,
 				89E9B4B52E64350700DD8550 /* User.swift in Sources */,
 				89E9B4B62E64350700DD8550 /* UserRepository.swift in Sources */,
