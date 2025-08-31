@@ -32,8 +32,13 @@ class ViewController: UIViewController {
         view.addSubview(stakView)
         setupConstraints()
     }
+  
+   
+}
+// MARK: - Setup View
+private extension ViewController {
     
-    private func setupLabel() {
+     func setupLabel() {
         guard let randomUser = helper.getPerson().randomElement()?.userName else { return }
         textLabel.text = randomUser
         textLabel.font = .systemFont(ofSize: 25)
@@ -45,11 +50,16 @@ class ViewController: UIViewController {
         stakView.axis = .vertical
         stakView.distribution = .fillProportionally
         stakView.spacing = 20
+        stakView.addViews(view: textLabel, redButton, greenButton)
         stakView.addArrangedSubview(textLabel)
         stakView.addArrangedSubview(redButton)
         stakView.addArrangedSubview(greenButton)
     }
     
+}
+
+// MARK: - Setup Constraints
+extension ViewController {
     private func setupConstraints() {
         stakView.translatesAutoresizingMaskIntoConstraints = false
         
